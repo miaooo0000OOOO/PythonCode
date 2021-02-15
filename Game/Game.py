@@ -163,11 +163,11 @@ class Game:
 
     def step(self, keys):
         self.steps += 1
-        clock.tick(60)
-        screen.blit(bg_img, (0, 0))
-        screen.blit(player.image, player.rect)
-        screen.blit(collision_box.image, collision_box.rect)
-        show_text(screen, (0, 0), "hp:{}".format(player.hp), font_size=40)
+        self.clock.tick(60)
+        self.screen.blit(self.bg_img, (0, 0))
+        self.screen.blit(self.player.image, self.player.rect)
+        self.screen.blit(self.collision_box.image, self.collision_box.rect)
+        show_text(self.screen, (0, 0), "hp:{}".format(self.player.hp), font_size=40)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
