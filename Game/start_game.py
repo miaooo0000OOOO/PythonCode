@@ -39,8 +39,8 @@ try:
         x = B[0]-A[0]
         y = B[1]-A[1]
         k = ((r**2)/(x**2+y**2))**0.5
-        r = [k*x, k*y]
-        return r
+        v = [k*x, k*y]
+        return v
 
     class CollisionBox(pygame.sprite.Sprite):
         def __init__(self, surface):
